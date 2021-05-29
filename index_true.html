@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="#">About</a>
+                <a href="#">Store</a>
+            </div>
+            <div>
+                <a href="#">Gmail</a>
+                <a href="#">Images</a>
+                <a href="#"><div onlick="myMenu()" class="menu gsprite"></div></a>
+                <a href="#" id="login"><div></div></a>
+            </div>
+        </nav>
+        <div id="popup" class="popup" stype="display: none;">
+            <a href="#">
+                <div class="first sprite"></div>
+                <div class="icon_text">Tribute</div>
+            </a>
+            <a href="#">
+                <div class="second sprite"></div>
+                <div class="icon_text">Form</div>
+            </a>
+            <a href="#">
+                <div class="third sprite"></div>
+                <div class="icon_text">Landing</div>
+            </a>
+            <a href="#">
+                <div class="fourth sprite"></div>
+                <div class="icon_text">Portfolio</div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <img src="img/google.svg" alt="Google Logo">
+        </img>
+        <div>
+            <form>
+                <div class="search_icon gsprite"></div>
+                <input type="text" name="search" id="search">
+                <div class="buttons">
+                    <a><div id="gsearch">Google Search</div></a>
+                    <a><div id="lucky">I'm Feeling Lucky</div></a>
+                </div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <div onclick="darkMode()">
+        <span class="switch gsprite"></span>
+    </div>
+    <footer>
+        <nav>
+            <div>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        function myMenu() {
+            var x = document.getElementByID("popup");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
